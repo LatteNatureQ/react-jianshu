@@ -1,0 +1,15 @@
+.mark-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+  transition: all 1s;
+}
+/*# sourceMappingURL=mark.css.map */

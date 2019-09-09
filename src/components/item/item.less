@@ -1,0 +1,35 @@
+.comment--list-list {
+  display: flex;
+  padding: .18rem;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  .comment--list-list-title {
+    font-size: .2rem;
+    font-weight: 700;
+    margin-bottom: .1rem;
+  }
+  .comment--list-list-content {
+    margin-bottom: .1rem;
+    color: #999999;
+    //text-overflow: -o-ellipsis-lastline;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .comment--list-list-online {
+    color: #999999;
+    span {
+      margin-right: .04rem;
+    }
+  }
+  img {
+    width: .8rem;
+    height: .8rem;
+  }
+  .avatar {
+    display: flex;
+    align-items: center;
+  }
+}

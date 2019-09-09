@@ -1,0 +1,40 @@
+.detail-wrap {
+  padding: 0.18rem;
+}
+.detail-wrap .detail-wrap-title {
+  font-size: 0.3rem;
+  font-weight: 700;
+  line-height: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.detail-wrap .detail-wrap-content .detail-wrap-content-t .detail-wrap-content-t-t {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.1rem;
+}
+.detail-wrap .detail-wrap-content .detail-wrap-content-t .detail-wrap-content-t-b {
+  display: flex;
+}
+.detail-wrap .detail-wrap-content .detail-wrap-content-t .detail-wrap-content-t-b p {
+  margin-left: 0.1rem;
+}
+.detail-wrap .detail-wrap-content .detail-wrap-content-t p {
+  margin-right: 0.1rem;
+}
+.detail-wrap .detail-wrap-content .detail-wrap-content-t .avatar {
+  width: 0.34rem;
+  height: 0.34rem;
+  border-radius: 50%;
+}
+.detail-wrap .detail-wrap-content .detail-wrap-content-t .badges_img {
+  width: 0.2rem;
+  height: 0.2rem;
+}
+.detail-wrap .detail-wrap-content .detail-wrap-content-b {
+  font-size: 0.16rem;
+}
+.detail-wrap .detail-wrap-content .detail-wrap-content-b p {
+  margin-top: 0.2rem;
+  line-height: 0.3rem;
+}
+/*# sourceMappingURL=detail.css.map */

@@ -1,0 +1,68 @@
+.Collections-wrap-t {
+  display: flex;
+  padding: 0.18rem;
+}
+.Collections-wrap-t .avatar {
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 0.08rem;
+  margin-right: 0.2rem;
+}
+.Collections-wrap-t p {
+  margin-bottom: 0.1rem;
+  letter-spacing: 0.02rem;
+}
+.Collections-wrap-t p.title {
+  font-size: 0.22rem;
+  font-weight: 700;
+}
+.Collections-wrap-t div {
+  flex: 1;
+}
+.Collections-wrap-t div p {
+  letter-spacing: normal;
+  line-height: 0.2rem;
+}
+.Collections-wrap-t div .am-button {
+  margin-top: 0.1rem;
+}
+.Collections-wrap-t .info {
+  height: 0.6rem;
+  overflow: hidden;
+}
+.Collections-wrap-b .comment_new_wrap li {
+  padding: 0.18rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+.Collections-wrap-b .comment_new_wrap li p {
+  margin-bottom: 0.1rem;
+}
+.Collections-wrap-b .comment_new_wrap li .title {
+  font-size: 0.2rem;
+  font-weight: 700;
+}
+.Collections-wrap-b .comment_new_wrap li .content {
+  line-height: 0.2rem;
+  color: #999;
+}
+.Collections-wrap-b .comment_new_wrap li .info {
+  color: #999;
+}
+.Collections-wrap-b .comment_new_wrap li .comment_new_wrap_li_b {
+  display: flex;
+  align-items: center;
+}
+.Collections-wrap-b .comment_new_wrap li .icon_user {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.08rem;
+}
+.Collections-wrap-b .comment_new_wrap .more {
+  margin: auto 0;
+  padding: 15px 0 15px 7px;
+  text-align: center;
+  font-size: 15px;
+  color: #969696;
+}
+/*# sourceMappingURL=collections.css.map */

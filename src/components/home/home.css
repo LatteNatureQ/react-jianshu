@@ -1,0 +1,33 @@
+.collection-recommended {
+  height: 1.23rem;
+  padding: 0.18rem;
+  background-color: #fff;
+}
+.collection-recommended .collection-recommended-l {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.collection-recommended .collection-recommended-l .icon {
+  display: flex;
+  align-items: center;
+}
+.collection-recommended .collection-recommended-l .icon span {
+  margin-left: 0.1rem;
+}
+.collection-recommended .collection-recommended-r ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.collection-recommended .collection-recommended-r ul li {
+  border: 1px solid #f8c9c1;
+  padding: 0.05rem;
+  margin-top: 0.1rem;
+  margin-right: 0.15rem;
+  border-radius: 0.05rem;
+  color: #ea6f5a;
+}
+.comment-list {
+  margin-top: 0.1rem;
+}
+/*# sourceMappingURL=home.css.map */

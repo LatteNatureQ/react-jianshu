@@ -1,0 +1,22 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+li {
+    list-style: none;
+}
+i {
+    font-style: normal;
+}
+html {
+    font-size: 100px;
+}
+body {
+    font-size: .12rem;
+    background-color: #fff!important;
+}
+a {
+    color: #000;
+}
