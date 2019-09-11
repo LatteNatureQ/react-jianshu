@@ -1,0 +1,36 @@
+.comment_new_wrap li {
+  padding: 0.18rem;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+}
+.comment_new_wrap li p {
+  margin-bottom: 0.1rem;
+}
+.comment_new_wrap li .title {
+  font-size: 0.2rem;
+  font-weight: 700;
+}
+.comment_new_wrap li .content {
+  line-height: 0.2rem;
+  color: #999;
+}
+.comment_new_wrap li .info {
+  color: #999;
+}
+.comment_new_wrap li .comment_new_wrap_li_b {
+  display: flex;
+  align-items: center;
+}
+.comment_new_wrap li .icon_user {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 0.08rem;
+}
+.comment_new_wrap .more {
+  margin: auto 0;
+  padding: 15px 0 15px 7px;
+  text-align: center;
+  font-size: 15px;
+  color: #969696;
+}
+/*# sourceMappingURL=comment.css.map */

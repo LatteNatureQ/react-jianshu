@@ -4,6 +4,7 @@ import Header from '../header/header'
 import axios from '../../http/http'
 import {Button, TabBar} from 'antd-mobile'
 import {Link} from 'react-router-dom'
+import Comment from '../comment_component/comment'
 
 export default class Collections extends Component {
     constructor(props) {
@@ -19,9 +20,12 @@ export default class Collections extends Component {
             comment_new_config: {
                 slug: this.props.match.params.slug,
                 page: 1,
-                count: 10
+                count: 10,
+                order_by: 'commented_at'
             },
-            comment_new: []
+            commented_at: [],
+            added_at: [],
+            top: []
 
         }
         // console.log(this.props.match.params.slug)
@@ -42,31 +46,39 @@ export default class Collections extends Component {
             comment_new_config: {
                 slug: this.props.match.params.slug,
                 page,
-                count: 10
+                count: 10,
+                order_by: 'commented_at'
             }
         })
         this.getComment_new(page)
 
     }
-    getComment_new = (page = 1, count = 10) => {
+    getComment_new = (page = 1, count = 10, order_by = 'commented_at') => {
         axios.get('http://47.107.225.115:8080/other/comment_new', {
             params: {
                 slug: this.state.comment_new_config.slug,
                 page,
-                count
+                count,
+                order_by
             }
         }).then(res => {
-            console.log(res.data)
-            this.state.comment_new.push(...res.data)
+            this.state[order_by].push(...res.data)
             this.setState({
-                comment_new: this.state.comment_new
+                [order_by]: this.state[order_by]
             })
 
         })
     }
     componentDidMount = () => {
         this.handelHttp()
-        this.getComment_new()
+        this.getComment_new(1, 10, 'commented_at')
+        this.getComment_new(1, 10, 'added_at')
+        this.getComment_new(1, 10, 'top')
+    }
+
+    // item 点击
+    handelPress = (e) => {
+        console.log(e)
     }
 
     render() {
@@ -99,7 +111,7 @@ export default class Collections extends Component {
                             display: 'none'
                         }}
                         />}>
-                            1
+                            <Comment commentNew={this.state.added_at}/>
                         </TabBar.Item>
                         <TabBar.Item onPress={() => {
                             this.setState({
@@ -114,25 +126,8 @@ export default class Collections extends Component {
                             display: 'none'
                         }}
                         />}>
-                            <ul className='comment_new_wrap'>
-                                {this.state.comment_new.map((value, index) =>
-                                    <Link to={'/detail/' + value.object.data.slug}>
-                                        <li key={index}>
-                                            <div>
-                                                <p className='title'>{value.object.data.title}</p>
-                                                <p className='content'>{value.object.data.public_abbr}</p>
-                                                <p className='info'>年轻人,创业不要总</p>
-                                            </div>
-                                            <div className='comment_new_wrap_li_b'>
-                                                <img className='icon_user'
-                                                     src={value.object.data.list_image_url + '?imageMogr2/auto-orient/strip|imageView2/1/w/160/h/160/format/webp'}
-                                                     alt=""/>
-                                            </div>
-                                        </li>
-                                    </Link>
-                                )}
-                                <div className='more' onClick={this.handelLoadMore}>加载更多</div>
-                            </ul>
+                            <Comment commentNew={this.state.commented_at}/>
+
                         </TabBar.Item>
                         <TabBar.Item onPress={() => {
                             this.setState({
@@ -140,14 +135,15 @@ export default class Collections extends Component {
                                     sel3: true
                                 },
                             });
-                        }} selected={this.state.selectTabbar.sel3} title='热门' icon={<div style={{
-                            display: 'none'
-                        }}
-                        />} selectedIcon={<div style={{
+                        }} selected={this.state.selectTabbar.sel3} title='热门'
+                                     icon={<div style={{
+                                         display: 'none'
+                                     }}
+                                     />} selectedIcon={<div style={{
                             display: 'none'
                         }}
                         />}>
-                            3
+                            <Comment commentNew={this.state.top}/>
                         </TabBar.Item>
                     </TabBar>
                 </div>

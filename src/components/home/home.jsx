@@ -52,8 +52,8 @@ export default class Home extends Component {
                     </div>
                     <div className='collection-recommended-r'>
                         <ul>
-                            {this.state.recommended_collections.map((item, index) => <Link to={'collections/'+item.slug}>
-                                <li key={index}>{item.title}</li>
+                            {this.state.recommended_collections.map((item, index) => <Link key={index} to={'collections/'+item.slug}>
+                                <li >{item.title}</li>
                             </Link>)}
                         </ul>
                     </div>
